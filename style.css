@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+  }
+  
+h3 {
+    text-align: center;
+  }
+body {
+    background-image: url("/images/fondo.jpg");
+    background-repeat : no-repeat;
+    background-size : cover;
+}
