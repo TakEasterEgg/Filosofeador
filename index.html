@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Reggaeton rapido</title>
+</head>
+<body>
+    <h1 class="center">Letra de cancion</h1>
+    
+    <h3 class="center">
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="ea"></div>
+        <div id="2"></div>
+        <button onclick="estrofa()"> Estrofa </button>
+    </h3>
+    
+    
+</body>
+<script>
+    sujeto = ["mami", "gata", "perra", "zorra", "nena", "chica", "mujeL"]
+    deseo = ["yo quiero", "vamos a", "voy a", "yo quiero", "yo vengo a"]
+    verbo = ["castigaLte", "cogeLte", "encendeLte","daLte","azotaLte","prendeLte","perreaLte", "bellaqueaLte"]
+    adj = ["duro","rapido","lento","suave","fuerte","rudo","como te gusta"]
+    tiempo = ["hasta que salga el sol", "toa la noche", "hasta el amaneceL", "hasta mañana", "toO el dia"]
+    final = ["sin miedo","sin anestesia","en el piso","contra la pared","sin compromiso","en mi cama","hasta que tu marido se entere","en lo oscuro"]
+
+
+    function retextear(verso){
+    verso.toString()
+    randsujeto = sujeto[Math.floor(Math.random() * sujeto.length)]
+    randdeseo = deseo[Math.floor(Math.random() * deseo.length)]
+    randverbo = verbo[Math.floor(Math.random() * verbo.length)]
+    randadj = adj[Math.floor(Math.random() * adj.length)]
+    randtiempo = tiempo[Math.floor(Math.random() * tiempo.length)]
+    randfinal = final[Math.floor(Math.random() * final.length)]
+    console.log(verso)
+    if (verso%2 == 0) {
+        return document.getElementById(verso).innerHTML = randverbo + " " + randadj + " " + randtiempo + " " + randfinal
+    } else {
+        return document.getElementById(verso).innerHTML = randsujeto + " " + randdeseo + " " + randverbo + " " + randadj + " " + randtiempo + " " + randfinal
+    }
+
+        
+    }
+
+    function estrofa(){
+        n = 0
+        document.getElementById("ea").innerHTML = "Ea Ea Ea"
+        for (var i = 0; i < 3; i++) {
+            n +=1 
+            retextear(n)
+            
+        }
+    }
+
+</script>
+</html>
