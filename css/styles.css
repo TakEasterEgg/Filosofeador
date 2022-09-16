@@ -6,7 +6,7 @@ h3 {
     text-align: center;
   }
 body {
-    background-image: url("/images/fondo.jpg");
+    background-image: url("https://github.com/TakEasterEgg/Reggaetonton/blob/main/images/fondo.jpg");
     background-repeat : no-repeat;
     background-size : cover;
 }
