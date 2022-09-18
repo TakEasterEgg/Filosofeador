@@ -6,7 +6,12 @@ h3 {
     text-align: center;
   }
 body {
-    background-image: url("/Reggaetonton/assets/img/twerking2.jpg");
+    background-image: url("../img/twerking2.jpg");
     background-size : cover;
     background-repeat : no-repeat;
+}
+
+div {
+    color: white;
+    -webkit-text-stroke: 1px black;
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Reggaeton rapido</title>
 </head>
 <body>
@@ -16,48 +16,11 @@
         <div id="2"></div>
         <div id="3"></div>
         <div id="ea"></div>
-        <div id="2"></div>
+        <div id="4"></div>
         <button onclick="estrofa()"> Estlofa ia' tu sabe' </button>
     </h3>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
-<script>
-    sujeto = ["mami", "gata", "perra", "zorra", "nena", "chica", "mujel"]
-    deseo = ["yo quiero", "vamos a", "voy a", "yo quiero", "yo vengo a"]
-    verbo = ["castigalte", "cogelte", "encendelte","dalte","azotalte","prendelte","perrealte", "bellaquealte"]
-    adj = ["duro","rapido","lento","suave","fuelte","rudo","como te gusta", "sin disimulo"]
-    tiempo = ["hasta que salga el sol", "toa la noche", "hasta el amanecel", "hasta mañana", "toO el dia"]
-    final = ["sin miedo","sin anestesia","en el piso","contra la pared","sin compromiso","en mi cama","hasta que tu marido se entere","en lo oscuro"]
-
-
-    function retextear(verso){
-    verso.toString()
-    randsujeto = sujeto[Math.floor(Math.random() * sujeto.length)]
-    randdeseo = deseo[Math.floor(Math.random() * deseo.length)]
-    randverbo = verbo[Math.floor(Math.random() * verbo.length)]
-    randadj = adj[Math.floor(Math.random() * adj.length)]
-    randtiempo = tiempo[Math.floor(Math.random() * tiempo.length)]
-    randfinal = final[Math.floor(Math.random() * final.length)]
-    console.log(verso)
-    if (verso%2 == 0) {
-        return document.getElementById(verso).innerHTML = randverbo + " " + randadj + " " + randtiempo + " " + randfinal
-    } else {
-        return document.getElementById(verso).innerHTML = randsujeto + " " + randdeseo + " " + randverbo + " " + randadj + " " + randtiempo + " " + randfinal
-    }
-
-        
-    }
-
-    function estrofa(){
-        n = 0
-        document.getElementById("ea").innerHTML = "Ea Ea Ea"
-        for (var i = 0; i < 3; i++) {
-            n +=1 
-            retextear(n)
-            
-        }
-    }
-
-</script>
+<script src="logica.js"></script>
 </html>
