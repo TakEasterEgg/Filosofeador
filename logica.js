@@ -1,35 +1,28 @@
 // Movemos toda la logica del html aca para que no quede una cosa horrorosa
+referencia = ["enrevesado", "fascinante", "sustancial", "efimero", "insolito", "espendido", "primordial",
+"estetico", "onirico", "inconcebible", "imperfecto", "abrumador"]
 
-sujeto = ["mami", "gata", "perra", "zorra", "nena", "chica", "mujel"]
-deseo = ["yo quiero", "vamos a", "voy a", "yo quiero", "yo vengo a"]
-verbo = ["castigalte", "cogelte", "encendelte","dalte","azotalte","prendelte","perrealte", "bellaquealte"]
-adj = ["duro","rapido","lento","suave","fuelte","rudo","como te gusta", "sin disimulo"]
-tiempo = ["hasta que salga el sol", "toa la noche", "hasta el amanecel", "hasta mañana", "toO el dia"]
-final = ["sin miedo","sin anestesia","en el piso","contra la pared","sin compromiso","en mi cama","hasta que tu marido se entere","en lo oscuro"]
+objeto = ["la vida", "del mundo", "del tiempo", "de la realidad", "del alma",
+            "del universo", "del conocimiento", "de la humanidad", "del mar",
+        "de la sociedad", "de la luna", "de la tenologia", "de la tristeza",
+        "del vacio", "de la verdad", "del cosmos", "del arte", "de la oscuridad",
+        "de la ficcion", "del sol", "del espacio", "de la muerte", "del cielo",
+        "del espiritu", "de la felicidad", "de la consciencia", "de la mente",
+        "de la madurez", "del escepticismo", "de la euforia", "del amor"]
 
-
-function retextear(verso){
-verso.toString()
-randsujeto = sujeto[Math.floor(Math.random() * sujeto.length)]
-randdeseo = deseo[Math.floor(Math.random() * deseo.length)]
-randverbo = verbo[Math.floor(Math.random() * verbo.length)]
-randadj = adj[Math.floor(Math.random() * adj.length)]
-randtiempo = tiempo[Math.floor(Math.random() * tiempo.length)]
-randfinal = final[Math.floor(Math.random() * final.length)]
-console.log(verso)
-if (verso%2 == 0) {
-    return document.getElementById(verso).innerHTML = randverbo + " " + randadj + " " + randtiempo + " " + randfinal
-} else {
-    return document.getElementById(verso).innerHTML = randsujeto + " " + randdeseo + " " + randverbo + " " + randadj + " " + randtiempo + " " + randfinal
-} 
-}
-
-function estrofa(){
-    n = 0
-    document.getElementById("ea").innerHTML = "Ea Ea Ea"
-    for (var i = 0; i < 4; i++) {
-        n +=1 
-        retextear(n)
+enque = ["imperfeccion", "diversidad", "contraste", "vastedad", "magia",
+        "simpleza", "hipocresia", "subjetividad", "incomprension", "frivolidad"]
         
-    }
+
+function retextear(){
+
+randreferencia = referencia[Math.floor(Math.random() * referencia.length)]
+randobjeto = objeto[Math.floor(Math.random() * objeto.length)]
+randenque = enque[Math.floor(Math.random() * enque.length)]
+
+frasefinal = "Lo "+randreferencia + " " + randobjeto + " radica en su " + randenque + "."
+console.log(frasefinal)
+
+return document.getElementById("frase").innerHTML = frasefinal
 }
+
