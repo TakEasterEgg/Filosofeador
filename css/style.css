@@ -12,7 +12,7 @@ div {
   display: flex;
   justify-content: right;
   color: white;
-  min-height: 230px;
+  min-height: 240px;
   align-items: center;
-  padding-right: 2em
+  padding-right: 2em;
 }
