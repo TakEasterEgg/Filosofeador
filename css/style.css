@@ -10,9 +10,12 @@ body {
 
 div {
   display: flex;
+  flex-direction: column;
   justify-content: right;
   color: white;
-  min-height: 240px;
+  /* min-height: 240px; */
   align-items: center;
-  padding-right: 2em;
+  padding-left: 20em;
+  padding-right: 1em;
+  padding-top: 5em;
 }
